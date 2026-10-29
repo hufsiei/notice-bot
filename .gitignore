@@ -5,3 +5,5 @@ site/
 __pycache__/
 # gh-pages로 올릴 페이지를 모아 두는 작업 폴더
 .publish/
+# 설명서는 PC에만 두고 GitHub에는 올리지 않는다
+README.md
