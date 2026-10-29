@@ -23,7 +23,7 @@ BOARDS = {
     "2183": ("채용", BASE, "hufs"),
     "3431": ("국제교류", OIA, "oia"),
 }
-UA = "Mozilla/5.0 (HUFS-NoticeBot prototype; contact: innovation support team)"
+UA = "Mozilla/5.0 (HUFS-NoticeBot; non-profit; contact: innovation support team)"
 DELAY = 0.5  # 요청 사이 대기(초)
 RECHECK_DAYS = 14  # 이 기간 안에 올라온 글은 수정 여부를 다시 확인
 RECHECK_GAP = dt.timedelta(hours=3)  # 같은 글을 다시 확인하는 최소 간격
