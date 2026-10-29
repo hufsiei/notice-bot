@@ -44,6 +44,12 @@ header { display: flex; align-items: flex-start; justify-content: space-between;
 h1 { font-size: 25px; line-height: 1.3; margin: 0; letter-spacing: -0.02em; color: var(--title); }
 h1 .en { white-space: nowrap; letter-spacing: -0.01em; }
 @media (max-width: 440px) { .theme-btn .lbl { display: none; } .theme-btn { padding: 5px 9px; } }
+.disclaimer { background: var(--accent-soft); color: var(--ink); border: 1px solid var(--line);
+  border-radius: 10px; padding: 10px 12px; margin: 0 0 14px; font-size: 13px; line-height: 1.55; }
+.disclaimer p { margin: 0; }
+.disclaimer p + p { margin-top: 4px; }
+.disclaimer a { color: var(--accent); word-break: break-all; }
+.disclaimer strong { color: var(--title); }
 .updated { display: inline-block; margin-top: 6px; padding: 3px 10px; border-radius: 999px;
   background: var(--accent-soft); color: var(--accent); font-size: 13.5px; font-weight: 600; }
 .theme-btn { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px;
@@ -119,6 +125,10 @@ footer { color: var(--sub); font-size: 12px; text-align: center; margin: 24px 0 
     </div>
     <button class="theme-btn" id="theme-btn" type="button"></button>
   </header>
+  <aside class="disclaimer" aria-label="안내">
+    <p>본 페이지는 한국외대 홈페이지(<a href="https://www.hufs.ac.kr" target="_blank" rel="noopener">https://www.hufs.ac.kr</a>) 공지사항 및 국제교류팀(<a href="https://oia.hufs.ac.kr/oia/index.do" target="_blank" rel="noopener">https://oia.hufs.ac.kr/oia/index.do</a>) 공지사항을 한눈에 볼 수 있게 모아둔 곳으로 한국외대 이용자의 편의를 위한 것이며 영리를 목적으로 하지 않습니다.</p>
+    <p><strong>정확한 내용 및 마감기한 등은 공식 홈페이지를 통해 확인하시기 바랍니다.</strong></p>
+  </aside>
 
   <section class="panel" aria-label="내 조건">
     <div class="row"><span class="label">캠퍼스</span><span id="f-campus"></span></div>

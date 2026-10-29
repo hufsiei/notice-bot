@@ -4,12 +4,14 @@
     python run.py --pages 5    # 더 많이 수집
     python run.py --ai         # Claude로 추출 (ANTHROPIC_API_KEY 필요)
     python run.py --no-collect # 수집 없이 페이지만 다시 만들기
+    python run.py --publish    # 끝나면 GitHub Pages(gh-pages)로 올리기
 """
 import argparse
 
 import build
 import collect
 import extract
+import publish
 
 
 def main():
@@ -17,12 +19,15 @@ def main():
     p.add_argument("--pages", type=int, default=2, help="게시판마다 읽을 목록 페이지 수")
     p.add_argument("--ai", action="store_true", help="Claude API로 추출")
     p.add_argument("--no-collect", action="store_true", help="수집 단계 건너뛰기")
+    p.add_argument("--publish", action="store_true", help="GitHub Pages로 올리기")
     a = p.parse_args()
 
     store = collect.load() if a.no_collect else collect.collect(pages=a.pages)
     store = extract.enrich(store, use_ai=a.ai)
     collect.save(store)
     build.build(store)
+    if a.publish:
+        publish.publish()
 
 
 if __name__ == "__main__":

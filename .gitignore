@@ -1,5 +1,7 @@
 # 공지 원문 저장본: 원문 전체를 다시 게시하지 않도록 저장소에 올리지 않는다
 data/
-# 생성 결과물: GitHub Actions가 매번 새로 만들어 Pages로 배포한다
+# 생성 결과물: publish.py가 gh-pages 가지로 따로 올린다
 site/
 __pycache__/
+# gh-pages로 올릴 페이지를 모아 두는 작업 폴더
+.publish/

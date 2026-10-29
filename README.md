@@ -10,7 +10,7 @@ python run.py --pages 5    # 더 많이 수집
 python run.py --no-collect # 수집 없이 페이지만 다시 만들기
 ```
 
-결과물은 `site/` 폴더에 생깁니다. `site/index.html`을 브라우저로 열면 됩니다. 추가 설치는 필요 없고 Python 표준 라이브러리만 씁니다.
+결과물은 `site/` 폴더에 생깁니다. `--publish`를 붙이면 끝난 뒤 `site/`를 GitHub의 `gh-pages` 가지로 올립니다(`run.bat`은 항상 붙여 실행). `site/index.html`을 브라우저로 열면 됩니다. 추가 설치는 필요 없고 Python 표준 라이브러리만 씁니다.
 
 Windows에서는 `run.bat`를 작업 스케줄러에 등록해 하루 몇 번 돌리면 자동으로 갱신됩니다.
 
