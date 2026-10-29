@@ -1,0 +1,535 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//HUFS Notice Bot//KO
+CALSCALE:GREGORIAN
+X-WR-CALNAME:훕스 공지비서 · 전체 마감
+X-WR-TIMEZONE:Asia/Seoul
+BEGIN:VEVENT
+UID:267820@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:[마감] 2026학년도 서울캠퍼스 재학생 대상 법정의
+ 무교육 이수 안내
+DESCRIPTION:대상: 서울캠퍼스 학부생\n할 일: 기간 안에 이
+ 수 완료\n근거: 3. 수강기간 : 2026년 9월 28일(월) ~ 12월 31
+ 일(목)\nhttps://www.hufs.ac.kr/bbs/hufs/2180/267820/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/267820/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270126@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261230
+DTEND;VALUE=DATE:20261231
+SUMMARY:[마감 24:00] KOCW(대학공개강의) 서비스 종료 및 수
+ 강확인증 발급 기한 안내
+DESCRIPTION:대상: 전체 구성원\n할 일: 기한 안에 발급·다
+ 운로드\n근거: 2. 수강확인증 다운로드 기간: 2026. 12. 30.(
+ 수)\, 24:00까지\nhttps://www.hufs.ac.kr/bbs/hufs/2180/270126/artclView
+ .do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/270126/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:268861@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:[마감] 한국외대 글로벌캠퍼스 명수당 가을철 단
+ 풍 관람객 행락차량 사전 예약 안내
+DESCRIPTION:대상: 글로벌캠퍼스 전체 구성원\n할 일: 내용 
+ 확인\n근거: 2026년 10월 24일(토) ~ 11월 22일(일)\, 기간 중 
+ 토요일 및 일요일\nhttps://www.hufs.ac.kr/bbs/hufs/2180/268861/artc
+ lView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/268861/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269907@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:[마감] 2026 로컬 크리에이터 양성 교육 수강생 모
+ 집
+DESCRIPTION:대상: 글로벌캠퍼스 학부생\n할 일: 신청(접수)\
+ n근거: 모집 기간: 2026년 10월 26일(월) ~ 11월 6일(금)\nhttps
+ ://www.hufs.ac.kr/bbs/hufs/2180/269907/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/269907/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:268279@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:[마감 09:00] 2026년도 후반기 학생예비군 기본 2차훈
+ 련(안내)
+DESCRIPTION:대상: 서울캠퍼스 전체 구성원\n할 일: 행사 참
+ 석(일정 확인)\n근거: 가. 훈련일시 : 2026년 11월 2일(월) 0
+ 9:00 ~ 18:00 (8시간)\nhttps://www.hufs.ac.kr/bbs/hufs/2180/268279/artcl
+ View.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/268279/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270137@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:[마감] 2027년 “LG와 함께하는 사랑의 다문화 학교
+ ” 멘토 모집
+DESCRIPTION:대상: 학부생\n할 일: 신청(접수)\n근거: 10.27.~11.
+ 16.\nhttps://www.hufs.ac.kr/bbs/hufs/2180/270137/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/270137/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270076@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261111
+SUMMARY:[마감] 📢 2026 AI 캠퍼스: 바이브코딩 경진대회(한
+ 국외대 × 네이버클라우드 공동주최)
+DESCRIPTION:대상: 학부생·대학원생·교원·직원\n할 일: 내
+ 용 확인\n근거: 10. 27.(화)~11. 10.(화)\nhttps://www.hufs.ac.kr/bbs
+ /hufs/2180/270076/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/270076/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269900@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:[마감 14:00] 카카오 AI 돛 센터 김영덕 센터장 초청 
+ HUFS특강
+DESCRIPTION:대상: 글로벌캠퍼스 교원\n할 일: 행사 참석(일
+ 정 확인)\n근거: 1. 일시: 2026. 11. 12.(목) 14:00~\nhttps://www.hu
+ fs.ac.kr/bbs/hufs/2180/269900/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/269900/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:268842@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:[마감] 2026-2학기 중간시험 공고
+DESCRIPTION:대상: 학부생\n할 일: 내용 확인\n근거: 2. 성적
+ 확인기간 : 2026. 10. 26.(월) ~ 11. 2.(월)\nhttps://www.hufs.ac.kr/b
+ bs/hufs/2181/268842/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2181/268842/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269897@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:[마감 15:00] 2026-2 CU이문1호점 장학금 장학생 선발(~
+ 11/4)
+DESCRIPTION:대상: 서울캠퍼스 학부생\n할 일: 신청서(지원
+ 서) 제출\n근거: 가. 지원기간: 2026. 10. 29(목) ~ 11. 4(수) 15
+ :00까지\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269897/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269897/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269754@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:[마감 15:00] 2026-2학기 HK Produce Group 장학생 선발(Lang
+ uage & AI 융합학부 재학생)~11/2까지
+DESCRIPTION:대상: 서울캠퍼스 학부생\n할 일: 신청서(지원
+ 서) 제출\n근거: 가. 지원기간 : 2026. 10. 26(월)~ 11. 2(월) 15
+ :00까지\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269754/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269754/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269675@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:[마감] 2026년 2학기 푸른등대 기부장학금 2차 장학
+ 생 선발(~11/12)
+DESCRIPTION:대상: 학부생\n할 일: 신청서(지원서) 제출\n근
+ 거: [공통][국가] 2026년 2학기 푸른등대 기부장학금 2차 
+ 장학생 선발(~11/12)\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269675/art
+ clView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269675/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269542@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:[마감 13:00] 2027년도 한국지도자육성장학재단 신규
+ 장학생 모집
+DESCRIPTION:대상: 학부생 (3학년)\n할 일: 신청서(지원서) 제
+ 출\n근거: 6. 구비서류 제출기한: 2026. 11. 2(월) 13:00 도착
+ 분\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269542/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269542/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269175@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:[마감 15:00] 2026-2학기 글로벌 비전(신우회) 장학금 
+ 신청안내
+DESCRIPTION:대상: 글로벌캠퍼스 학부생\n할 일: 서류 제출\n
+ 근거: 7. 제출기한: 2026. 10. 19.(월) ~ 2026. 11. 3(화) 오후 15:
+ 00까지\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269175/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269175/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269143@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:[마감 23:59] 2026학년도 창업장학금 신청 안내(~11/27)
+DESCRIPTION:대상: 학부생\n할 일: 신청(접수)\n근거: 신청기
+ 간: 2026. 10. 27.(화) ~ 11. 27.(금) 23:59까지\nhttps://www.hufs.ac.k
+ r/bbs/hufs/2182/269143/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269143/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270247@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:[마감] 2026년도 통영시 저소득 대학생 장학금 지원
+ 대상자 선발(~11/23)
+DESCRIPTION:대상: 학부생\n할 일: 신청서(지원서) 제출\n근
+ 거: [공통][교외]2026년도 통영시 저소득 대학생 장학금 
+ 지원대상자 선발(~11/23)\nhttps://www.hufs.ac.kr/bbs/hufs/2182/2702
+ 47/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/270247/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270246@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:[마감] 2026년도 하반기 강화군 대학생 등록금 지원
+ 사업 안내(~11/9)
+DESCRIPTION:대상: 학부생\n할 일: 내용 확인\n근거: [공통][
+ 교외]2026년도 하반기 강화군 대학생 등록금 지원사업 
+ 안내(~11/9)\nhttps://www.hufs.ac.kr/bbs/hufs/2182/270246/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/270246/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270241@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:[마감] 2026년 2학기 선원가족 장학생 선발 기간 연
+ 장(~10/30)
+DESCRIPTION:대상: 학부생\n할 일: 신청서(지원서) 제출\n근
+ 거: [공통][교외]2026년 2학기 선원가족 장학생 선발 기간
+  연장(~10/30)\nhttps://www.hufs.ac.kr/bbs/hufs/2182/270241/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/270241/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270157@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261110
+SUMMARY:[마감 15:00] 2026-2 제이씨현장학재단 장학생 모집 
+ 안내
+DESCRIPTION:대상: 학부생\n할 일: 신청서(지원서) 제출\n근
+ 거: 6. 지원기간: 2026. 11. 2(월) ~ 11. 9(월) 15:00까지\nhttps://
+ www.hufs.ac.kr/bbs/hufs/2182/270157/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/270157/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269896@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:[마감 14:00] 2026학년도 2학기 10월 다문화탈북학생 
+ 멘토링 출근부 마감 안내
+DESCRIPTION:대상: 서울캠퍼스 학부생\n할 일: 출근부 제출\n
+ 근거: 2. [근로지담당자] 2026년 10월 온라인출근부 대학
+ 제출 마감 : 2026. 11. 2.(월) 오후 2시\nhttps://www.hufs.ac.kr/bbs
+ /hufs/2182/269896/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269896/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269895@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:[마감 14:00] 2026학년도 2학기 10월 대학생 청소년교
+ 육지원장학 출근부 마감 안내
+DESCRIPTION:대상: 학부생\n할 일: 출근부 제출\n근거: 2. [근
+ 로지 담당자] 2026년 10월 온라인출근부 대학제출 마감: 2
+ 026. 11. 2.(월) 오후 2시\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269895
+ /artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269895/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269882@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:[마감 14:00] 2026학년도 2학기 10월 국가근로 출근부 
+ 마감 안내
+DESCRIPTION:대상: 학부생\n할 일: 출근부 제출\n근거: 2. [근
+ 로지 담당자] 2026년 10월 온라인출근부 대학제출 마감: 2
+ 026. 11. 2.(월) 오후 2시\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269882
+ /artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269882/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269811@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:[마감 23:59] 2026학년도 동계방학 국제학사 GlobeeDorm 
+ 기숙사 입사생 모집
+DESCRIPTION:대상: 학부생·대학원생\n할 일: 신청(접수)\n근
+ 거: 2026. 11. 2.(월) 10:00 ∼ 11. 22.(일) 23:59까지\nhttps://www.hu
+ fs.ac.kr/bbs/hufs/2180/269811/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/269811/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269778@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:[마감 17:00] 2027학년도 법학전문대학원 지원자 대
+ 상 실전모의면접 안내
+DESCRIPTION:대상: 대학원생\n할 일: 서류 제출\n근거: ◦지
+ 원대상 학교 지원 서류(자기소개서)의 사본을PDF\, 한글 
+ 파일 형태로 첨부하여Pre-Law School메일로2026년 10월30일(
+ 금)오후5시까지 제출\nhttps://www.hufs.ac.kr/bbs/hufs/2180/269778/
+ artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/269778/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269734@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:[마감] 2026년 겨울방학 특별 외국어과정 수강생 모
+ 집 안내
+DESCRIPTION:대상: 학부생·대학원생\n할 일: 신청(접수)\n근
+ 거: 2026. 11. 2.(월)~11. 27.(금)\nhttps://www.hufs.ac.kr/bbs/hufs/2180
+ /269734/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2180/269734/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:260783@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:[마감] 2027학년도 학교현장실습(교육실습) 신청 안
+ 내
+DESCRIPTION:대상: 학부생\n할 일: 서류 제출\n근거: 3. 제출 
+ 기간: 2026년 8월 10일(월) ~ 12월 11일(금)\nhttps://www.hufs.ac.k
+ r/bbs/hufs/2181/260783/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2181/260783/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269445@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:[마감 16:00] 2026학년도 하반기 인석장학금 선발 공
+ 고(~11/26)
+DESCRIPTION:대상: 학부생\n할 일: 신청서(지원서) 제출\n근
+ 거: 가. 지원서 제출기한: 2026. 11. 18(수) 오전10시~ 2026. 11
+ . 26.(목) 오후4시까지 인석장학회 홈페이지 온라인 접수
+ \nhttps://www.hufs.ac.kr/bbs/hufs/2182/269445/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269445/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269436@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261121
+SUMMARY:[마감] 2026년 2학기 안산시 대학생 본인부담 등록
+ 금 반값지원 장학생 선발(~11/20)
+DESCRIPTION:대상: 학부생\n할 일: 신청서(지원서) 제출\n근
+ 거: [공통][교외]2026년 2학기 안산시 대학생 본인부담 등
+ 록금 반값지원 장학생 선발(~11/20)\nhttps://www.hufs.ac.kr/bbs/
+ hufs/2182/269436/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269436/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269429@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261116
+DTEND;VALUE=DATE:20261117
+SUMMARY:[마감] 2026년 2학기 거창군 지역출신 대학생 등록
+ 금 지원사업 공고(~11/16)
+DESCRIPTION:대상: 학부생\n할 일: 내용 확인\n근거: [공통][
+ 교외]2026년 2학기 거창군 지역출신 대학생 등록금 지원
+ 사업 공고(~11/16)\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269429/artclV
+ iew.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269429/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269410@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:[마감] 한국고등교육재단 인재림 제7기 장학생 선
+ 발 공고(~10/29)
+DESCRIPTION:대상: 학부생\n할 일: 신청서(지원서) 제출\n근
+ 거: [공통][교외]한국고등교육재단 인재림 제7기 장학생
+  선발 공고(~10/29)\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269410/artcl
+ View.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269410/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269281@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261114
+SUMMARY:[마감] 2027년도 두산연강재단 대학 장학생 모집(~11
+ /13)
+DESCRIPTION:대상: 학부생\n할 일: 신청서(지원서) 제출\n근
+ 거: [공통][교외] 2027년도 두산연강재단 대학 장학생 모
+ 집(~11/13)\nhttps://www.hufs.ac.kr/bbs/hufs/2182/269281/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2182/269281/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270114@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:[마감 11:00] 한국외국어대학교 2027학년도 1학기 교
+ 수 초빙 공고
+DESCRIPTION:대상: 교원\n할 일: 내용 확인\n근거: 2026.11. 6.(
+ 금) 오전 11시부터 2026. 11. 12.(목) 오전 11시까지\nhttps://ww
+ w.hufs.ac.kr/bbs/hufs/2183/270114/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2183/270114/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270065@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261112
+SUMMARY:[마감 23:00] 2026학년도 겨울방학 사업지원처 주관 
+ 영어캠프 한국인 보조교사(TA·PA) 모집안내
+DESCRIPTION:대상: 학부생·대학원생\n할 일: 신청(접수)\n근
+ 거: 가. 접수기간 : 2026. 10. 28.(수) ~ 11. 11.(수) 23:00까지\nh
+ ttps://www.hufs.ac.kr/bbs/hufs/2183/270065/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2183/270065/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:270005@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:[마감 08:00] 한국외국어대학교 기간제근로자 채용
+ 공고_사업본부운영2팀 한국어문화교육원
+DESCRIPTION:대상: 직원\n할 일: 신청(접수)\n근거: 가. 접수
+ 기간: 2026. 10. 27.(화) 16:00~11. 3.(화) 08:00까지\nhttps://www.huf
+ s.ac.kr/bbs/hufs/2183/270005/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2183/270005/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269873@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261103
+SUMMARY:[마감 08:00] 한국외국어대학교 단기 기간제근로자 
+ 채용공고_국제교류처 국제교류팀(Campus Asia 한중일 확장
+ 사업) [재공고]
+DESCRIPTION:대상: 직원\n할 일: 신청(접수)\n근거: 가. 접수
+ 기간 : 2026. 10. 26.(월) 16:00~11. 2.(월) 08:00까지\nhttps://www.hu
+ fs.ac.kr/bbs/hufs/2183/269873/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2183/269873/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269766@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:[마감 14:00] 한국외국어대학교 인권센터 상담연구
+ 원 채용공고
+DESCRIPTION:대상: 대학원생\n할 일: 신청(접수)\n근거: 가. 
+ 접수기간 : 2026.10.26(월) ~ 2026. 11.04(수) 14시\nhttps://www.hufs
+ .ac.kr/bbs/hufs/2183/269766/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2183/269766/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269691@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:[마감 08:00] 한국외국어대학교 기간제근로자 채용
+ 공고_행정지원처 시설관리팀(서울) [2차 재공고]
+DESCRIPTION:대상: 서울캠퍼스 직원\n할 일: 신청(접수)\n근
+ 거: 가. 접수기간: 2026. 10. 22.(목) 16:00~10. 29.(목) 08:00까지
+ \nhttps://www.hufs.ac.kr/bbs/hufs/2183/269691/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2183/269691/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269689@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:[마감 08:00] 한국외국어대학교 기간제근로자 채용
+ 공고_정보처 정보전략팀 (웹 디자이너)
+DESCRIPTION:대상: 대학원생·직원\n할 일: 신청(접수)\n근거:
+  가. 접수기간: 2026. 10. 22.(목) 16:00~10. 29.(목) 08:00까지\nht
+ tps://www.hufs.ac.kr/bbs/hufs/2183/269689/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2183/269689/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269690@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:[마감 16:00] ] 2026학년도 2학기 및 동계방학 근로조
+ 교(학부생) 모집 공고
+DESCRIPTION:대상: 글로벌캠퍼스 학부생\n할 일: 신청(접수)\
+ n근거: - 접수기간 : ~ 2026년 11월 6일(금) 16시 ※ 적격 지
+ 원자 있을 시 조기 마감\nhttps://www.hufs.ac.kr/bbs/hufs/2183/269
+ 690/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2183/269690/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:268506@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+SUMMARY:[마감 15:00] LD학부 대학원생 조교 모집 공고
+DESCRIPTION:대상: 학부생·대학원생\n할 일: 신청서(지원서)
+  제출\n근거: 1) 접수기한: 2027년 1월 8일(금) 오후 03시까
+ 지 (선발시 즉시 마감)\nhttps://www.hufs.ac.kr/bbs/hufs/2183/26850
+ 6/artclView.do
+URL:https://www.hufs.ac.kr/bbs/hufs/2183/268506/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269503@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20261031
+SUMMARY:[마감 15:00] 2026학년도 하반기 국제교류프로그램 
+ 설명회 개최 안내
+DESCRIPTION:대상: 학부생\n할 일: 서류 제출\n근거: - 설명회
+  참석신청 설문조사 제출 기한: 2026. 10. 30.(금) 오후 3시
+ 까지\nhttps://oia.hufs.ac.kr/bbs/oia/3431/269503/artclView.do
+URL:https://oia.hufs.ac.kr/bbs/oia/3431/269503/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:269054@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261109
+SUMMARY:[마감 23:59] 2026학년도 하반기 2회차 기관토플 응시
+  접수 안내
+DESCRIPTION:대상: 학부생\n할 일: 신청(접수)\n근거: 3. 응시
+ 접수 마감기한 : ~ 2026. 11. 08.(일) 23:59:00\nhttps://oia.hufs.ac.
+ kr/bbs/oia/3431/269054/artclView.do
+URL:https://oia.hufs.ac.kr/bbs/oia/3431/269054/artclView.do
+END:VEVENT
+BEGIN:VEVENT
+UID:267903@hufs-notice-bot
+DTSTAMP:20261029T074307Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270301
+SUMMARY:[마감] 한국외국어대학교 x ETS 토플 할인 혜택
+DESCRIPTION:대상: 학부생·대학원생\n할 일: 내용 확인\n근
+ 거: 📅 시험 일정: 2027년 2월 28일까지\nhttps://oia.hufs.ac.kr
+ /bbs/oia/3431/267903/artclView.do
+URL:https://oia.hufs.ac.kr/bbs/oia/3431/267903/artclView.do
+END:VEVENT
+END:VCALENDAR
