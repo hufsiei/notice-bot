@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>훕스 공지비서 | HUFS Notice Assistant</title>
+<script>
+// 저장된 화면 모드를 그리기 전에 적용해 깜빡임을 막는다
+try { const t = localStorage.getItem("hufs-notice-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  /* 다크모드의 안내 상자와 브리핑 숫자는 HUFS Gold 계열로 쓴다.
+   다크모드는 눈부심을 줄이도록 순검정 대신 짙은 남회색 바탕을 쓴다.
+   한국외대 UI 컬러시스템: Navy(7463C) #002D56, Green(315C) #146E7A, Gray(Cool Gray 5C) #DADAD3, Gold(874C) #8D7150 */
+  --bg: #f4f4f0; --card: #ffffff; --ink: #16191b; --sub: #5b6064; --line: #dadad3;
+  --accent: #002d56; --accent-soft: #e3eaf2; --warn: #b4441f; --warn-soft: #fbece6; --ok: #1d6b45;
+  --chip: #ecece6; --title: #002d56; --guide-bg: #002d56; --guide-ink: #ffffff; --guide-line: #002d56;
+  --guide-btn: #ffffff; --guide-btn-ink: #002d56; --gold: #8d7150; color-scheme: light;
+  --stat-bg: var(--chip); --stat-ink: var(--ink); --stat-sub: var(--sub); --stat-line: transparent; --stat-hot: var(--warn);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c222b; --card: #242c37; --ink: #e9edf2; --sub: #9ba6b3; --line: #36414f;
+    --accent: #9dbbe0; --accent-soft: #2e3f55; --warn: #e5946f; --warn-soft: #41302a; --ok: #80c4a2;
+    --chip: #2d3643; --title: #e9edf2; --guide-bg: #3a3125; --guide-ink: #f4eee5; --guide-line: #6e5c43;
+    --guide-btn: #cfb18a; --guide-btn-ink: #241b10; --gold: #cfb18a; color-scheme: dark;
+  --stat-bg: #352d23; --stat-ink: #ecd9bb; --stat-sub: #c8b597; --stat-line: #5a4a36; --stat-hot: #f0a07a;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c222b; --card: #242c37; --ink: #e9edf2; --sub: #9ba6b3; --line: #36414f;
+  --accent: #9dbbe0; --accent-soft: #2e3f55; --warn: #e5946f; --warn-soft: #41302a; --ok: #80c4a2;
+  --chip: #2d3643; --title: #e9edf2; --guide-bg: #3a3125; --guide-ink: #f4eee5; --guide-line: #6e5c43;
+  --guide-btn: #cfb18a; --guide-btn-ink: #241b10; --gold: #cfb18a; color-scheme: dark;
+  --stat-bg: #352d23; --stat-ink: #ecd9bb; --stat-sub: #c8b597; --stat-line: #5a4a36; --stat-hot: #f0a07a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font-family: Pretendard, -apple-system, "Malgun Gothic", sans-serif; font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 16px; }
+header { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin: 4px 0 14px; }
+h1 { font-size: 25px; line-height: 1.3; margin: 0; letter-spacing: -0.02em; color: var(--title); }
+h1 .en { white-space: nowrap; letter-spacing: -0.01em; }
+@media (max-width: 440px) { .theme-btn .lbl { display: none; } .theme-btn { padding: 5px 9px; } }
+.updated { display: inline-block; margin-top: 6px; padding: 3px 10px; border-radius: 999px;
+  background: var(--accent-soft); color: var(--accent); font-size: 13.5px; font-weight: 600; }
+.theme-btn { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px;
+  padding: 5px 12px; font: inherit; font-size: 13px; cursor: pointer; white-space: nowrap; }
+.panel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin-bottom: 12px; }
+.row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 6px 0; }
+.row > .label { width: 52px; color: var(--sub); font-size: 13px; flex-shrink: 0; }
+.chip { border: 1px solid var(--line); background: var(--card); color: var(--ink); border-radius: 999px;
+  padding: 5px 11px; font: inherit; font-size: 13.5px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--card); }
+.brief { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.stat { background: var(--stat-bg); border: 1px solid var(--stat-line); border-radius: 10px; padding: 10px; }
+.stat b { display: block; font-size: 22px; letter-spacing: -0.02em; color: var(--stat-ink); }
+.stat span { color: var(--stat-sub); font-size: 12.5px; }
+.stat.hot b { color: var(--stat-hot); }
+.tabs { display: flex; gap: 6px; margin: 16px 0 10px; align-items: center; }
+.tab { border: 0; background: none; font: inherit; font-weight: 600; color: var(--sub); padding: 6px 4px; cursor: pointer;
+  border-bottom: 2px solid transparent; }
+.tab[aria-selected="true"] { color: var(--ink); border-color: var(--ink); }
+.search { margin-left: auto; flex: 1; max-width: 220px; border: 1px solid var(--line); background: var(--card);
+  color: var(--ink); border-radius: 10px; padding: 7px 10px; font: inherit; font-size: 14px; min-width: 0; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin-bottom: 10px; }
+.meta { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; font-size: 12px; color: var(--sub); }
+.tag { background: var(--chip); border-radius: 6px; padding: 1px 7px; }
+.tag.campus { background: var(--accent-soft); color: var(--accent); }
+.tag.check { background: var(--warn-soft); color: var(--warn); }
+.dday { margin-left: auto; font-weight: 700; font-size: 13px; color: var(--accent); }
+.dday.soon { color: var(--warn); }
+.dday.none { color: var(--sub); font-weight: 500; }
+.card h2 { font-size: 16px; margin: 8px 0 8px; line-height: 1.4; letter-spacing: -0.01em; }
+.card h2 a { color: inherit; text-decoration: none; }
+.card h2 a:hover { text-decoration: underline; }
+dl.three { display: grid; grid-template-columns: 62px 1fr; gap: 3px 8px; margin: 0; font-size: 14px; }
+dl.three dt { color: var(--sub); }
+dl.three dd { margin: 0; }
+.gist { color: var(--sub); font-size: 13.5px; margin: 8px 0 0; }
+details { margin-top: 8px; font-size: 13px; color: var(--sub); }
+details summary { cursor: pointer; }
+details p { margin: 6px 0 0; padding: 8px 10px; background: var(--chip); border-radius: 8px; color: var(--ink); }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn { border: 1px solid var(--accent); background: var(--accent); color: var(--card); border-radius: 10px;
+  padding: 9px 14px; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; }
+.btn.ghost { background: var(--card); color: var(--accent); }
+.empty { text-align: center; color: var(--sub); padding: 40px 0; }
+.note { color: var(--sub); font-size: 12.5px; margin: 8px 0 0; }
+.guide { background: var(--guide-bg); color: var(--guide-ink); border: 1px solid var(--guide-line); border-left: 5px solid var(--gold);
+  border-radius: 12px; padding: 16px; margin: 14px 0 0; box-shadow: 0 4px 14px rgba(0, 45, 86, .22); }
+.guide strong { display: block; font-size: 17px; margin-bottom: 4px; }
+.guide p { margin: 0 0 12px; font-size: 14px; line-height: 1.5; }
+.guide p:last-child { margin-bottom: 0; }
+.guide a { display: block; text-align: center; background: var(--guide-btn); color: var(--guide-btn-ink);
+  border-radius: 10px; padding: 11px; font-size: 15px; font-weight: 700; text-decoration: none; }
+.guide a:hover { opacity: .9; }
+.to-top { position: fixed; right: 16px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%;
+  border: 0; background: var(--accent); color: var(--card); font-size: 22px; line-height: 1; cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25); opacity: 0; pointer-events: none; transition: opacity .2s; }
+.to-top.show { opacity: 1; pointer-events: auto; }
+footer { color: var(--sub); font-size: 12px; text-align: center; margin: 24px 0 8px; }
+@media (max-width: 480px) {
+  .brief { grid-template-columns: repeat(3, 1fr); }
+  .stat b { font-size: 19px; }
+  .search { max-width: none; }
+  .tabs { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>훕스 공지비서 <span class="en">(HUFS Notice Assistant)</span></h1>
+      <span class="updated" id="updated"></span>
+    </div>
+    <button class="theme-btn" id="theme-btn" type="button"></button>
+  </header>
+
+  <section class="panel" aria-label="내 조건">
+    <div class="row"><span class="label">캠퍼스</span><span id="f-campus"></span></div>
+    <div class="row"><span class="label">신분</span><span id="f-role"></span></div>
+    <div class="row"><span class="label">관심</span><span id="f-cat"></span></div>
+    <div class="guide" id="grad-guide" role="note" hidden>
+      <strong>🎓 대학원 공지 안내</strong>
+      <p>본 페이지는 학교 홈페이지(www.hufs.ac.kr) 공지사항에 있는 내용만 반영하며, 기타 대학원 관련 자세한 사항은 해당 대학원 홈페이지에서 확인 바랍니다.</p>
+    </div>
+    <div class="guide" id="career-guide" role="note" hidden>
+      <strong>💼 취업·진로 공지는 HUFSAbility에서</strong>
+      <p>취업진로 관련 공지는 HUFSAbility에서 확인하여 주시기 바랍니다.</p>
+      <a href="https://hufsability.hufs.ac.kr/common/user/login.do?rtnUrl=21306aa07dd2f16c34d6c553b2e842ba014b25b816e5523c22ff3f6c59ab3da5" target="_blank" rel="noopener">HUFSAbility 바로가기 ↗</a>
+    </div>
+    <div class="guide" id="extra-guide" role="note" hidden>
+      <strong>🎯 더 많은 비교과는 HUFSAbility에서</strong>
+      <p>본 페이지는 학교 홈페이지(www.hufs.ac.kr) 공지사항에 있는 내용만 반영하며, 기타 더 많은 비교과 정보는 HUFSAbility에서 확인 가능합니다.</p>
+      <a href="https://hufsability.hufs.ac.kr/common/user/login.do?rtnUrl=21306aa07dd2f16c34d6c553b2e842ba014b25b816e5523c22ff3f6c59ab3da5" target="_blank" rel="noopener">HUFSAbility 바로가기 ↗</a>
+    </div>
+    <p class="note">조건은 이 브라우저에만 저장되고 어디로도 보내지 않습니다.</p>
+  </section>
+
+  <section class="panel" aria-label="이번 주 브리핑">
+    <div class="brief">
+      <div class="stat hot"><b id="s-week">0</b><span>7일 안 마감</span></div>
+      <div class="stat"><b id="s-open">0</b><span>신청 가능한 공지</span></div>
+      <div class="stat"><b id="s-new">0</b><span>최근 7일 새 공지</span></div>
+    </div>
+    <div class="actions" style="margin-top:12px">
+      <button class="btn" id="dl-ics">설정한 조건의 공지 마감일을 캘린더로 받기</button>
+    </div>
+    <p class="note">캘린더 파일(.ics)은 구글·네이버·아이폰 캘린더에서 열 수 있습니다.</p>
+  </section>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="due" aria-selected="true">마감 임박</button>
+    <button class="tab" role="tab" data-tab="new" aria-selected="false">최신 공지</button>
+    <input class="search" id="q" type="search" placeholder="검색 (예: 장학, 계절학기)">
+  </div>
+  <main id="list"></main>
+  <button class="to-top" id="to-top" type="button" aria-label="맨 위로">↑</button>
+  <footer>원문은 한국외대 홈페이지 공지사항입니다. 요약은 자동 추출이라 틀릴 수 있으니 중요한 내용은 원문을 확인하세요.<br>바이브코딩 경진대회 출품용 프로토타입</footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const CAMPUS = ["전체", "서울", "글로벌"];
+const ROLES = ["학부생", "대학원생", "교원", "직원"];
+const CATS = ["장학", "학사", "채용", "취업·진로", "국제교류", "비교과(행사·특강 등)", "기타"];
+const KEY = "hufs-notice-prefs";
+
+// 다크모드 버튼: 지금 보이는 모드의 반대로 바꾸고 이 브라우저에 기억한다
+const isDark = () => document.documentElement.dataset.theme
+  ? document.documentElement.dataset.theme === "dark"
+  : matchMedia("(prefers-color-scheme: dark)").matches;
+const themeBtn = document.getElementById("theme-btn");
+const paintThemeBtn = () => {
+  const label = isDark() ? "라이트모드" : "다크모드";
+  themeBtn.innerHTML = `${isDark() ? "☀️" : "🌙"}<span class="lbl"> ${label}</span>`;
+  themeBtn.setAttribute("aria-label", label);
+  themeBtn.setAttribute("aria-pressed", isDark());
+};
+themeBtn.onclick = () => {
+  const t = isDark() ? "light" : "dark";
+  document.documentElement.dataset.theme = t;
+  try { localStorage.setItem("hufs-notice-theme", t); } catch (e) {}
+  paintThemeBtn();
+};
+paintThemeBtn();
+
+let prefs = { campus: "전체", roles: [], cats: [], tab: "due", q: "" };
+try { Object.assign(prefs, JSON.parse(localStorage.getItem(KEY) || "{}")); } catch (e) {}
+prefs.cats = prefs.cats.filter(c => CATS.includes(c));  // 이름이 바뀐 옛 분류는 버린다
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(prefs)); } catch (e) {} };
+
+const today = new Date(); today.setHours(0, 0, 0, 0);
+const toDate = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+const daysLeft = s => Math.round((toDate(s) - today) / 864e5);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function chips(el, options, isOn, toggle) {
+  el.innerHTML = options.map(o => `<button class="chip" aria-pressed="${isOn(o)}">${o}</button> `).join("");
+  el.querySelectorAll("button").forEach((b, i) => b.onclick = () => { toggle(options[i]); save(); render(); });
+}
+
+function matches(it) {
+  if (prefs.campus !== "전체" && it.campus !== "공통" && it.campus !== prefs.campus) return false;
+  if (prefs.roles.length && it.roles.length && !it.roles.some(r => prefs.roles.includes(r))) return false;
+  if (prefs.cats.length && !it.categories.some(c => prefs.cats.includes(c))) return false;
+  if (prefs.q) {
+    const hay = (it.title + " " + it.who + " " + it.gist + " " + it.writer).toLowerCase();
+    if (!prefs.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  return true;
+}
+
+function card(it) {
+  const d = it.deadline;
+  let dday = `<span class="dday none">기한 정보 없음</span>`;
+  let due = "원문 확인";
+  if (d) {
+    const n = daysLeft(d.date);
+    const label = n < 0 ? "마감" : n === 0 ? "D-day" : `D-${n}`;
+    dday = `<span class="dday ${n <= 3 && n >= 0 ? "soon" : ""}">${label}</span>`;
+    const [, m, day] = d.date.split("-").map(Number);
+    const wk = "일월화수목금토"[toDate(d.date).getDay()];
+    due = `${m}월 ${day}일(${wk})${d.time ? " " + d.time : ""}까지`;
+  }
+  const tags = [
+    `<span class="tag">${esc(it.board)}</span>`,
+    it.campus !== "공통" ? `<span class="tag campus">${esc(it.campus)}</span>` : "",
+    ...it.categories.filter(c => c !== it.board).map(c => `<span class="tag">${esc(c)}</span>`),
+    d && d.confidence === "low" ? `<span class="tag check">원문 확인</span>` : "",
+    it.changed && daysLeft(it.changed.slice(0, 10)) >= -7 ? `<span class="tag check">내용 수정</span>` : "",
+  ].join("");
+  return `<article class="card">
+    <div class="meta">${tags}${dday}</div>
+    <h2><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}</a></h2>
+    <dl class="three">
+      <dt>누구에게</dt><dd>${esc(it.who)}</dd>
+      <dt>무엇을</dt><dd>${esc(it.what)}</dd>
+      <dt>언제까지</dt><dd>${esc(due)}</dd>
+    </dl>
+    ${it.gist ? `<p class="gist">${esc(it.gist)}</p>` : ""}
+    <details><summary>근거와 출처</summary>
+      <p>${d ? "마감 근거: “" + esc(d.evidence) + "”<br>" : ""}게시: ${esc(it.date)} · ${esc(it.writer)}${it.files ? ` · 첨부 ${it.files}개` : ""}
+      · 추출: ${it.by === "rule" ? "규칙 기반" : "AI(" + esc(it.by) + ")"}</p>
+    </details>
+  </article>`;
+}
+
+function visible() {
+  const items = DATA.items.filter(matches);
+  if (prefs.tab === "due") {
+    return items.filter(i => i.deadline && daysLeft(i.deadline.date) >= 0)
+      .sort((a, b) => a.deadline.date.localeCompare(b.deadline.date));
+  }
+  return items;
+}
+
+function render() {
+  document.getElementById("updated").textContent = `🕒 업데이트 ${DATA.updated}`;
+  chips(document.getElementById("f-campus"), CAMPUS, o => prefs.campus === o, o => prefs.campus = o);
+  chips(document.getElementById("f-role"), ROLES, o => prefs.roles.includes(o),
+    o => prefs.roles = prefs.roles.includes(o) ? prefs.roles.filter(x => x !== o) : [...prefs.roles, o]);
+  chips(document.getElementById("f-cat"), CATS, o => prefs.cats.includes(o),
+    o => prefs.cats = prefs.cats.includes(o) ? prefs.cats.filter(x => x !== o) : [...prefs.cats, o]);
+  document.getElementById("grad-guide").hidden = !prefs.roles.includes("대학원생");
+  document.getElementById("career-guide").hidden = !prefs.cats.includes("취업·진로");
+  document.getElementById("extra-guide").hidden = !prefs.cats.includes("비교과(행사·특강 등)");
+  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.tab === prefs.tab));
+
+  const mine = DATA.items.filter(matches);
+  const open = mine.filter(i => i.deadline && daysLeft(i.deadline.date) >= 0);
+  document.getElementById("s-week").textContent = open.filter(i => daysLeft(i.deadline.date) <= 7).length;
+  document.getElementById("s-open").textContent = open.length;
+  document.getElementById("s-new").textContent = mine.filter(i => daysLeft(i.date) >= -7).length;
+
+  const list = visible();
+  document.getElementById("list").innerHTML = list.length ? list.map(card).join("")
+    : `<p class="empty">조건에 맞는 공지가 없습니다.${prefs.cats.includes("취업·진로")
+      ? "<br>취업·진로 공지는 위의 HUFSAbility 바로가기에서 확인하세요." : ""}</p>`;
+}
+
+function icsText(items) {
+  const e = s => String(s).replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+  const ymd = dt => `${dt.getFullYear()}${String(dt.getMonth() + 1).padStart(2, "0")}${String(dt.getDate()).padStart(2, "0")}`;
+  const stamp = new Date().toISOString().replace(/[-:]/g, "").replace(/\.\d+/, "");
+  const out = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//HUFS Notice Bot//KO", "X-WR-CALNAME:훕스 공지비서 · 내 마감"];
+  for (const it of items) {
+    const d = toDate(it.deadline.date), next = new Date(d); next.setDate(d.getDate() + 1);
+    out.push("BEGIN:VEVENT", `UID:${it.key}@hufs-notice-bot`, `DTSTAMP:${stamp}`,
+      `DTSTART;VALUE=DATE:${ymd(d)}`, `DTEND;VALUE=DATE:${ymd(next)}`,
+      `SUMMARY:${e("[마감" + (it.deadline.time ? " " + it.deadline.time : "") + "] " + it.topic)}`,
+      `DESCRIPTION:${e("대상: " + it.who + "\n할 일: " + it.what + "\n근거: " + it.deadline.evidence + "\n" + it.url)}`,
+      `URL:${it.url}`, "END:VEVENT");
+  }
+  out.push("END:VCALENDAR");
+  return out.join("\r\n") + "\r\n";
+}
+
+document.getElementById("dl-ics").onclick = () => {
+  const items = DATA.items.filter(i => matches(i) && i.deadline && daysLeft(i.deadline.date) >= 0);
+  if (!items.length) { alert("내 조건에 맞는 다가오는 마감이 없습니다."); return; }
+  const url = URL.createObjectURL(new Blob([icsText(items)], { type: "text/calendar" }));
+  const a = Object.assign(document.createElement("a"), { href: url, download: "hufs-my-deadlines.ics" });
+  a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
+};
+document.querySelectorAll(".tab").forEach(t => t.onclick = () => { prefs.tab = t.dataset.tab; save(); render(); });
+const q = document.getElementById("q");
+q.value = prefs.q;
+q.oninput = () => { prefs.q = q.value.trim(); save(); render(); };
+render();
+
+// 맨 위로 버튼: 조금 내려가면 나타난다
+const toTop = document.getElementById("to-top");
+addEventListener("scroll", () => toTop.classList.toggle("show", scrollY > 400), { passive: true });
+toTop.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+</script>
+</body>
+</html>
